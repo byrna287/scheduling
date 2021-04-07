@@ -3,7 +3,7 @@
 from scheduler import schedule
 from CPU import run
 from wait_time import avg_wait_time
-from schedule_rr import rr_avg_wait_time
+from turnaround_time import avg_turnaround_time
 
 import sys
 taskfile = sys.argv[1]
@@ -22,10 +22,8 @@ def main():
    tasks = schedule(algorithm, tasks)
    run(tasks)
 
-   if algorithm in ["fcfs", "sjf", "priority"]:
-      print("Average wait time: {:.4f} MS".format(avg_wait_time(tasks)))
-   else:
-      print(rr_avg_wait_time(tasks))
+   avg_wait_time(algorithm, tasks)
+   avg_turnaround_time(algorithm, tasks)
 
 if __name__ == '__main__':
    main()
