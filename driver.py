@@ -4,12 +4,17 @@ from scheduler import schedule
 from CPU import run
 from wait_time import avg_wait_time
 from turnaround_time import avg_turnaround_time
+from error_check import error_check
 
 import sys
 taskfile = sys.argv[1]
 algorithm = sys.argv[2]
 
 def main():
+   error = error_check(taskfile, algorithm)
+   if error == -1:
+      sys.exit()
+
    with open(taskfile, "r") as file:
       tasks = file.read().strip().split("\n")
 

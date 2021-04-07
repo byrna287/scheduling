@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
 
-from schedule_rr import make_gantt
+from gantt import make_gantt
 
 # average wait time for fcfs, sjf and priority scheduling algorithms (non-preemptive)
 def fcfs_sjf_pri_avg_wt(task_list):
+   proc, gantt = make_gantt(task_list)
    total_wait = 0
-   wait_each = 0
-   for i in range(len(task_list) - 1):
-      wait_each += task_list[i][2]
-      total_wait += wait_each
-
-   avg_wait = total_wait / len(task_list)
-   return avg_wait
+   for task in gantt:
+      total_wait += task[1]
+   return total_wait / len(proc)
 
 # average wait time for rr scheduling algorithm
 def rr_avg_wt(task_list):
