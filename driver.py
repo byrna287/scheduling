@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
+# need to: add comments, answer the questions
+
+from error_check import error_check
 from scheduler import schedule
-from CPU import run
 from wait_time import avg_wait_time
 from turnaround_time import avg_turnaround_time
-from error_check import error_check
 
 import sys
 taskfile = sys.argv[1]
@@ -25,8 +26,6 @@ def main():
       tasks[i][2] = int(tasks[i][2])
 
    tasks = schedule(algorithm, tasks)
-   run(tasks)
-
    avg_wait_time(algorithm, tasks)
    avg_turnaround_time(algorithm, tasks)
 

@@ -4,7 +4,7 @@ import os.path
 
 def error_check(file, alg):
    if os.path.exists(file) == False:
-      print("Error: the file \"" + file + "\" does not exist")
+      print("Error: file \"" + file + "\" does not exist")
       return -1
 
    elif alg not in ["fcfs", "sjf", "priority", "rr"]:

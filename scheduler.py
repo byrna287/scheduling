@@ -4,6 +4,7 @@ from schedule_fcfs import fcfs
 from schedule_sjf import sjf
 from schedule_priority import priority
 from schedule_rr import rr
+from CPU import run
 
 def schedule(alg, tasks):
    if alg == "fcfs":
@@ -15,4 +16,5 @@ def schedule(alg, tasks):
    elif alg =="rr":
       tasks = rr(tasks)
 
+   run(tasks)
    return tasks

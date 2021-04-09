@@ -5,7 +5,7 @@
 # time quantum = 10 MS
 
 def rr(task_list):
-   quantum = 4
+   quantum = 10
    for task in task_list:
       if task[2] > quantum:
          taskcpy = task[:]

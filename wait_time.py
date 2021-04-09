@@ -19,7 +19,7 @@ def rr_avg_wt(task_list):
       for j in range(len(gantt)):
          if p == gantt[j][0]:
             if j >= len(proc):
-               total_wait += gantt[j][1] - gantt[i + 1][1]
+               total_wait += gantt[j][1] - gantt[i][2]
                i = j
             else:
                total_wait += gantt[j][1]
