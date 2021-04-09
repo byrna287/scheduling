@@ -7,28 +7,28 @@ def fcfs_sjf_pri_avg_wt(task_list):
    proc, gantt = make_gantt(task_list)
    total_wait = 0
    for task in gantt:
-      total_wait += task[1]
-   return total_wait / len(proc)
+      total_wait += task[1]        # adds together all wait times in gantt chart
+   return total_wait / len(proc)   # divide by number of processes
 
 # average wait time for rr scheduling algorithm
 def rr_avg_wt(task_list):
    proc, gantt = make_gantt(task_list)
    total_wait = 0
-   for i in range(len(proc)):
+   for i in range(len(proc)):    # for each process
       p = proc[i]
-      for j in range(len(gantt)):
-         if p == gantt[j][0]:
-            if j >= len(proc):
-               total_wait += gantt[j][1] - gantt[i][2]
-               i = j
+      for j in range(len(gantt)):  # for each process in gantt chart
+         if p == gantt[j][0]:      # match process to process in gantt chart
+            if j >= len(proc):                           # if process has already been on cpu
+               total_wait += gantt[j][1] - gantt[i][2]   # wait time = start time - end time of last time
+               i = j                                     # i = last time process was on cpu
             else:
-               total_wait += gantt[j][1]
+               total_wait += gantt[j][1]   # if first time on cpu, add wait time
    
          if j < len(gantt) - 1:
-            if gantt[j][0] == gantt[j + 1][0]:
-               break
+            if gantt[j][0] == gantt[j + 1][0]:   # if current process is same as next process
+               break                             # exit loop as already have wait time
 
-   return total_wait / len(proc)
+   return total_wait / len(proc)    # divide by number of processes
 
 # print average waiting time for algorithm
 def avg_wait_time(algorithm, tasks):

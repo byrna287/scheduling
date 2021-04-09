@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
-# [task, pri, burst]
-# [['P1', 3, 2], ['P2', 1, 2], ['P3', 4, 2], ['P1', 3, 2], ['P2', 1, 1], ['P3', 4, 2], ['P3', 4, 1]]
+# [taskname, priority, burst]
 # time quantum = 10 MS
 
+# returns tasks sorted in order they came in, except when cpu burst is higher than the time quantum
+# tasks go to back of list after one time quantum
 def rr(task_list):
    quantum = 10
    for task in task_list:

@@ -6,6 +6,7 @@ from schedule_priority import priority
 from schedule_rr import rr
 from CPU import run
 
+# call correct scheduling algorithm on tasks
 def schedule(alg, tasks):
    if alg == "fcfs":
       tasks = fcfs(tasks)
@@ -16,5 +17,5 @@ def schedule(alg, tasks):
    elif alg =="rr":
       tasks = rr(tasks)
 
-   run(tasks)
+   run(tasks)     # prints out the tasks in correct order
    return tasks
