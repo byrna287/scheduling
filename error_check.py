@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# Ailbhe Byrne
+# 19424402
+# I acknowledge the DCU academic integrity policy
+
 import os.path
 
 # returns -1 if there's an error and 0 if no errors

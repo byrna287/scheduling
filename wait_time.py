@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# Ailbhe Byrne
+# 19424402
+# I acknowledge the DCU academic integrity policy
+
 from gantt import make_gantt
 
 # average wait time for fcfs, sjf and priority scheduling algorithms (non-preemptive)
@@ -33,6 +37,6 @@ def rr_avg_wt(task_list):
 # print average waiting time for algorithm
 def avg_wait_time(algorithm, tasks):
    if algorithm in ["fcfs", "sjf", "priority"]:
-      print("Average wait time: {:.3f} MS".format(fcfs_sjf_pri_avg_wt(tasks)))
+      print("Average waiting time: {:.3f} MS".format(fcfs_sjf_pri_avg_wt(tasks)))
    else:
-      print("Average wait time: {:.3f} MS".format(rr_avg_wt(tasks)))
+      print("Average waiting time: {:.3f} MS".format(rr_avg_wt(tasks)))

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
-# need to: answer the questions, run instructions
+# Ailbhe Byrne
+# 19424402
+# I acknowledge the DCU academic integrity policy
 
 from error_check import error_check
 from scheduler import schedule

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# Ailbhe Byrne
+# 19424402
+# I acknowledge the DCU academic integrity policy
+
 from schedule_fcfs import fcfs
 from schedule_sjf import sjf
 from schedule_priority import priority

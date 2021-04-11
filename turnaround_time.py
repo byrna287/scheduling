@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# Ailbhe Byrne
+# 19424402
+# I acknowledge the DCU academic integrity policy
+
 from gantt import make_gantt
 
 # average turnaround time for fcfs, sjf and priority scheduling algorithms (non preemptive)

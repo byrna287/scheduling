@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# Ailbhe Byrne
+# 19424402
+# I acknowledge the DCU academic integrity policy
+
 # makes a Gantt chart, [taskname, waittime, endtime]
 # returns a list of processes and Gantt chart
 def make_gantt(task_list):

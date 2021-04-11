@@ -1,0 +1,26 @@
+1. Based on the testing you have done, describe the turn-around time and average waiting time experienced. Which algorithms performed best/worst? Why do you think this is. You may need to tweak your code to get additional data to answer this one.
+
+sjf has shortest average waiting time
+bc shortest cpu bursts so least amount of waiting time
+longest average waiting time varies
+bc not sorted by cpu bursts so random cpu burst order
+
+sjf has shortest average turnaround time
+bc has shortest waiting time so finish quickest
+longest average turnaround time varies
+bc longest tt corresponds to longest wt as finish later bc waiting longer
+
+if all tasks have burst smaller than time quantum rr performs same as fcfs
+
+
+2. In this project you used a list to store processes once they were read in from the file. Explain how you implemented this. Did you use a queue or a general-purpose list? Why did you make this choice. do you think that this had any positive or negative effects?
+
+read them in, stripped and split on new line
+for each item split for list of lists
+strip commas, change numbers to ints
+
+general purpose list
+
+a queue is fifo, would have to sort the tasks before putting them in the queue anyway so easier to leave them in a list and sort that
+
+i think it had a positive effect as less work had to be done in the algorithms, just sorting not sorting and then adding to a queue
