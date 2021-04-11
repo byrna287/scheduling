@@ -2,7 +2,7 @@
 
 HOW TO RUN:
 python3 driver.py "task_text_file" "algorithm"
-where algorithm is one of: fcfs, sjf, priority, rr
+-- where algorithm is one of: fcfs, sjf, priority, rr
 
 VIDEO LINK:
 https://youtu.be/Ge61zXT_39g
