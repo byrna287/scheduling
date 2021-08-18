@@ -1,4 +1,4 @@
-## CA216 CPU Scheduling
+## CPU Scheduling
 
 HOW TO RUN:
 python3 driver.py "task_text_file" "algorithm"
@@ -7,9 +7,9 @@ python3 driver.py "task_text_file" "algorithm"
 VIDEO LINK:
 https://youtu.be/Ge61zXT_39g
 
-This is the repo for the C starter files.  Read the details below carefully.  Note: the details of the different algorithms required for both the solo and pairs versions of the project are [found in the project spec](https://ca216.computing.dcu.ie/assessments/scheduling-assignment/) Only implement the files for the project-type you are undertaking.
+This is the repo for the C starter files.  Read the details below carefully. Only implement the files for the project-type you are undertaking.
 
-Completing this project will require writing the following C files
+Completing this project will require writing the following C (or python) files
 
 schedule_fcfs.c
 schedule_sjf.c
